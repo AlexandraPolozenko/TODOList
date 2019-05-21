@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class TODOList {
-  static JSONArray list;
+  public JSONArray list;
 
   TODOList() {
     try {
