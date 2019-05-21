@@ -6,10 +6,6 @@ public class Main {
   public static void main(String[] args) {
     TODOList todoList = new TODOList();
 
-//    for (int i = 0; i < 200; i++) {
-//      todoList.addNewTask("str");
-//    }
-
     Scanner scanner = new Scanner(System.in);
     while (true) {
       System.out.println("Please, enter command");
@@ -48,6 +44,12 @@ public class Main {
 
           case "filter": {
             todoList.filterTODOList();
+
+            break;
+          }
+
+          case "help": {
+            todoList.printHelpMessage();
 
             break;
           }

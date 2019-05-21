@@ -56,7 +56,7 @@ public class TODOList {
       list.set(id, newTask);
 
       System.out.println("Task " + id + " done\n");
-    } catch (NullPointerException e){
+    } catch (NullPointerException | IndexOutOfBoundsException e){
       throw new TODOException(id);
     }
   }
@@ -82,7 +82,7 @@ public class TODOList {
 
       list.set(id, null);
       System.out.println("Task " + id + " deleted\n");
-    } catch (NullPointerException e) {
+    } catch (NullPointerException | IndexOutOfBoundsException e) {
       throw new TODOException(id);
     }
   }
@@ -177,6 +177,7 @@ public class TODOList {
     System.out.println("add - add new task");
     System.out.println("delete - delete existing task");
     System.out.println("filter - show only tasks which are in progress");
+    System.out.println("help - print help information");
     System.out.println("exit - finish session\n");
   }
 }
